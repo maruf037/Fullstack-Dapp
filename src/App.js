@@ -5,7 +5,7 @@ import { ethers } from 'ethers';
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
 
 // Update with the contract address logged out to CLI when it was deployed
-const greeterAddress = '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266'
+const greeterAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
 
 function App() {
   // storing greeting in local storage
