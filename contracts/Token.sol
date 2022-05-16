@@ -8,10 +8,12 @@ contract Token {
     string public name = "Maruf Token";
     string public symbol = "MT";
     uint public totalsupply = 1000000;
+    address public owner;
     mapping(address => uint) balances;
 
     constructor() {
         balances[msg.sender] = totalsupply;
+        owner = msg.sender;
     }
 
     function transfer(address to, uint amount) external {
