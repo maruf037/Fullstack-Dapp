@@ -22,13 +22,17 @@ async function main() {
 
   const Token = await hre.ethers.getContractFactory("Token");
   const token = await Token.deploy();
-  
+
+  const MTerc20 = await hre.ethers.getContractFactory("MTerc20");
+  const mterc20 = await MTerc20.deploy("MT erc20 Token: ", "MT20");
 
   await greeter.deployed();
   await token.deployed();
+  await mterc20.deployed();
 
   console.log("Greeter deployed to:", greeter.address);
   console.log("Token deployed to:", token.address);
+  console.log("MT ERC deployed to: ", mterc20.address);
   
 }
 
